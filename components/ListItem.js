@@ -4,7 +4,7 @@ import { StyleSheet, Text, TouchableHighlight, TouchableOpacity } from "react-na
 export default function ListItem({ el, deleteHandler }) {
   return (
     // передаем в ф-ию ключ элемента на который мы нажали, для удаления
-    <TouchableOpacity onPress={deleteHandler(el.key)}>
+    <TouchableOpacity onPress={() => deleteHandler(el.key)}>
       <Text style={styles.text}>{el.text}</Text>
     </TouchableOpacity>
   )
